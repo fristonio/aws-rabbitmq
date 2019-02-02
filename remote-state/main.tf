@@ -5,9 +5,14 @@ provider "aws" {
   region     = "${var.aws_region}"
 }
 
+locals {
+  terraform_dynamodb_table = "${var.prefix}-${var.terraform_dynamodb_table}"
+  terraform_remote_state_bucket = "${var.prefix}-${var.terraform_remote_state_bucket}"
+}
+
 # Create a DynamoDB table to perform state locking for terraform
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
-  name = "${var.terraform_dynamodb_table}"
+  name = "${local.terraform_dynamodb_table}"
   hash_key = "LockID"
   read_capacity = 10
   write_capacity = 10
@@ -24,7 +29,7 @@ resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
 
 # Create a S3 bucket to store terraform state remotely.
 resource "aws_s3_bucket" "terraform-state-storage-s3" {
-  bucket = "${var.terraform_remote_state_bucket}"
+  bucket = "${local.terraform_remote_state_bucket}"
 
   versioning {
     enabled = true

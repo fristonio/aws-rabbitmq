@@ -22,3 +22,8 @@ variable "terraform_dynamodb_table" {
   description = "DynamoDB table for Terraform to perform state locking when using remote state."
   default = "terraform-state-lock-dynamo"
 }
+
+variable "perfix" {
+  type = "string"
+  description = "A general prefix for required parameters"
+}
