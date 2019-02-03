@@ -12,7 +12,7 @@ data "template_file" "setup_template" {
     rabbit_secret_key    = "${var.rabbit_secret_key}"
     rabbitmq_admin       = "${var.rabbitmq_admin_user}"
     rabbitmq_admin_pass  = "${var.rabbitmq_admin_pass}"
-    erlang_cookie        = "${random_string.erlang_cookie}"
+    erlang_cookie        = "${random_string.erlang_cookie.result}"
   }
 }
 
