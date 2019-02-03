@@ -26,4 +26,5 @@ variable "terraform_dynamodb_table" {
 variable "perfix" {
   type = "string"
   description = "A general prefix for required parameters"
+  default = "example"
 }

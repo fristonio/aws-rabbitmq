@@ -11,6 +11,7 @@ To setup remote-state:
 $ cat terraform.tfvars
 aws_access_key = "AKIAIOSFODNN7EXAMPLE"
 aws_secret_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+prefix = "example"
 
 $ terraform init
 
