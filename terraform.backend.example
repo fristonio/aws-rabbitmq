@@ -1,0 +1,3 @@
+bucket = "example-tf-remote-state-storage-s3"
+dynamodb_table = "example-terraform-state-lock-dynamo"
+region = "ap-southeast-1"
