@@ -1,0 +1,17 @@
+aws_access_key = "AKIAIOSFODNN7EXAMPLE"
+aws_secret_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+
+rabbit_access_key = "AKIAIOSFODNN7EXAMPLE"
+rabbit_secret_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+
+rabbitmq_admin_user = "admin-user"
+rabbitmq_admin_pass = "admin-pass"
+
+ec2_instance_type = "m5.large"
+
+vpc_id = "vpc-ex1234"
+alb_sg_id = "sg-ex1234"
+ssh_sg_id = "sg-ex1234"
+subnet_id = "subnet-ex1234"
+
+prefix = "example"
