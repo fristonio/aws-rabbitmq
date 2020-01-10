@@ -7,3 +7,5 @@ output "rabbitmq_admin_pass" {
   description = "Rabbitmq admin password"
   value = "${var.rabbitmq_admin_pass}"
 }
+
+#gsdfg
